@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import indexPageView, aboutPageView, seeTaskPageView, createTaskPageView, editTaskPageView
+from .views import indexPageView, aboutPageView, seeTaskPageView, createTaskPageView, editTaskPageView, deleteTaskPageView
 
 urlpatterns = [
     path("", indexPageView, name="index"),
@@ -7,4 +7,5 @@ urlpatterns = [
     path("list/", seeTaskPageView, name="list"),
     path("create/", createTaskPageView, name="create"),
     path("edit/", editTaskPageView, name="edit"),
+    path("delete/", deleteTaskPageView, name="delete"),
 ]

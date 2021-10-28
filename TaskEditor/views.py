@@ -16,3 +16,6 @@ def createTaskPageView(request) :
 
 def editTaskPageView(request) :
     return HttpResponse("This page will be where you edit an exisiting task")
+
+def deleteTaskPageView(request) :
+    return HttpResponse("This page will be where you delete an exisiting task")
