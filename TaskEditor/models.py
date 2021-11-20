@@ -13,13 +13,11 @@ class ClassList(models.Model) :
 
     def __str__(self) :
         return (self.course_num)
-
 class AssignmentType(models.Model) :
     assign_type = models.CharField(max_length=15)
 
     def __str__(self) :
         return (self.assign_type)
-
 class Priority(models.Model) :
     priority = models.Model(max_length=10)
 
@@ -27,14 +25,13 @@ class Priority(models.Model) :
         return (self.priority)
 
 
-
 class Task(models.Model) :
-    course = models.OneToManyField(ClassList, models.CASCADE)
-    assignment = models.OneToMany(AssignmentType, models.CASCADE)
-    priority = models.OneToMany(Priority, models.CASCADE)
+    course = models.ForeignKey(ClassList, models.CASCADE)
+    assignment = models.ForeignKey(AssignmentType, models.CASCADE)
+    priority = models.ForeignKey(Priority, models.CASCADE)
     title = models.CharField(max_length=50)
     due_date = models.DateField(default=datetime.today, blank=True)
-    completed = BooleanField(default=False)
+    completed = models.BooleanField(default=False)
     notes = models.CharField(max_length=50)
     #cost = models.DecimalField(max_digits=8, decimal_places=2)
     #main_photo = models.ImageField(upload_to='photos')

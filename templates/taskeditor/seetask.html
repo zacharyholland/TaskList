@@ -1,4 +1,29 @@
         {% extends 'base.html' %}
         {% block content %}
-        <p><b>Template to See Tasks</b></p>
+        <body>
+                <table>
+                        <tr>
+                                <th>Completed</th>
+                                <th>Title</th>
+                                <th>Course</th>
+                                <th>Assignment</th>
+                                <th>Priority</th>
+                                <th>Due Date</th>
+                                <th>Notes</th>
+                        </tr>
+                        {% for r in rows %}
+                        <tr>
+                        {% for Task in r %}
+                                <td>{{Task.completed}}</td>
+                                <td>{{Task.title}}</td>
+                                <td>{{Task.course}}</td>
+                                <td>{{Task.assignment}}</td>
+                                <td>{{Task.priority}}</td>
+                                <td>{{Task.due_date}}</td>
+                                <td>{{task.notes}}</td>
+                        {% endfor %}
+                        </tr>
+{% endfor %}
+</table>
+        </body>
         {% endblock %}
