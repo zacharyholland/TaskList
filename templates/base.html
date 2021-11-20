@@ -1,17 +1,15 @@
-def indexPageView(request) :
-    return HttpResponse("Welcome to TaskList")
-
-def aboutPageView(request) :
-    return HttpResponse("This program will help you manage all the school tasks that are keeping you busy and stressed.")
-
-def seeTaskPageView(request) :
-    return HttpResponse("This page will be where your tasks are displayed")
-
-def createTaskPageView(request) :
-    return HttpResponse("This page will be where you create a new task")
-
-def editTaskPageView(request) :
-    return HttpResponse("This page will be where you edit an exisiting task")
-
-def deleteTaskPageView(request) :
-    return HttpResponse("This page will be where you delete an exisiting task")
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TastLisk</title>
+        <h1>Menu</h1>
+    </head>
+    <body>  
+        {% block content %}
+        {% endblock %}              
+    </body>
+            <footer>
+            <p>Author: Section 2 Group 3</p>
+            <p>IS403 Final Project</p>
+        </footer>
+</html> 
