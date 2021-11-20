@@ -19,7 +19,7 @@ class AssignmentType(models.Model) :
     def __str__(self) :
         return (self.assign_type)
 class Priority(models.Model) :
-    priority = models.Model(max_length=10)
+    priority = models.CharField(max_length=10)
 
     def __str__(self) :
         return (self.priority)
