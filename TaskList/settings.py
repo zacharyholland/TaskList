@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'TaskList.wsgi.application'
 DATABASES = {
         'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'travel',
+        'NAME': 'Tasklist',
         'USER': 'postgres',
         'PASSWORD': '',
         'HOST': 'localhost'
